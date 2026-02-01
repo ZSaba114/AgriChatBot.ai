@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AgriChatBot 🌱</title>
+
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="chat-container">
+        <!-- Header -->
+        <div class="chat-header">
+            <div class="logo-title">
+                <h1>AgriChatBot 🌱</h1>
+            </div>
+        </div>
+
+        <!-- Messages panel -->
+        <div class="chat-messages" id="chatPanel">
+            <!-- Messages will appear here -->
+        </div>
+
+        <!-- Input section -->
+        <div class="chat-input">
+            <form id="chatbot-form">
+                <input type="text" id="messageText" name="messageText" placeholder="Ask me anything about agriculture...">
+                <button id="chatbot-form-btn" type="submit">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+                <button id="chatbot-form-btn-voice" type="button">
+                    <i class="fas fa-microphone"></i>
+                </button>
+            </form>
+        </div>
+
+        <!-- Footer -->
+        <div class="chat-footer">
+            <button id="chatbot-form-btn-clear">Clear Chat</button>
+            <div class="voice-reading">
+                <input type="checkbox" id="voiceReadingCheckbox">
+                <label for="voiceReadingCheckbox">Enable voice reading</label>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+</body>
+</html>
